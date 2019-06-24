@@ -1,0 +1,28 @@
+#pie plot
+
+pies <- c()
+for(i in 1:length(unique(data$선수명))){
+  data3<- filter(data, 선수명 == data$선수명[i])
+  data3 <- select(data3,선수명,안타,득점,출루율,타율,볼넷,도루,타점,홈런)
+  
+  meldata <- melt(data3,id='선수명')
+  
+  
+  bp <- ggplot(meldata,aes(x=선수명, y=value, fill=variable))+
+    geom_bar(stat='identity',width=1)
+  
+  
+  pie <-bp + coord_polar(theta="y")+
+    scale_fill_discrete(guide = F)
+    
+  pies <- c(pies,paste('pie',i,sep=''))
+  assign(pies[i],pie)
+  
+  
+  
+}
+get(pies[2])
+for(i in 1:length(pies)){
+  pies[i] + facet_wrap(facets=.~선수명, ncol=5)
+  
+}

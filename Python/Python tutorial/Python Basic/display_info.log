@@ -1,0 +1,5 @@
+INFO:root:Run with args: ('john', 30), and kwargs: {}
+INFO:root:Run with args: ('Hank', 30), and kwargs: {}
+INFO:root:Run with args: ('john', 30), and kwargs: {}
+INFO:root:Run with args: ('Hank', 30), and kwargs: {}
+INFO:root:Run with args: ('TOM', 22), and kwargs: {}

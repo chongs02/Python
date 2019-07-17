@@ -7,21 +7,15 @@
 #23:59
 
 
-def count_3():
-    for i in range(1,25):
-        if i == 3 or i == 13 or i == 23:
-            count = 3 * 60
-        else :
-            a = []
-            count_2 = 0
-            for i in range(1,61):
-                a.append(str(i))
-            for i in a:
-                if len(i) >1 and (i[0]=='3' or i[1] =='3'):
-                    count_2 += 1
-                elif len(i) ==1 and(i[0]=='3'):
-                    count_2 +=1
-    print('총 ',count + count_2,'번')
+def clock_of_three():
+    sec = 0
+    for h in range(24):
+        for m in range(60):
+            clock = str(h) + str(m)
+            if '3' in clock:
+                sec += 60
+
+    print('총 ', sec ,'초')
 
 
-count_3()
+clock_of_three()

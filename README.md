@@ -1,6 +1,6 @@
 # Python
 
 
-## Python code practice
+## Python Tutorial
 
-## 파이썬 코드를 보관하는 장소입니다.
+
